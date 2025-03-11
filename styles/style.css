@@ -1,0 +1,403 @@
+:root {
+  --second-family: "Montserrat", sans-serif;
+  --third-family: "DM Sans", sans-serif;
+  --primary-main-color: #043873;
+  --primary-second-color: #4f9cf9;
+  --second-additional-color: #ffe492;
+  --third-additional-color: #c4defd; /* Цвет для подложек картинок */
+  --light-color: #fff;
+  --dark-color: #212529;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/* Повторяющиеся элементы */
+
+/* Повторяющаяся кнопка */
+.main-button {
+    position: relative;
+    margin-top: 60px;
+    border: none;
+    border-radius: 6px;
+    padding: 20px 64px 20px 20px;
+    color: var(--light-color);
+    font-weight: 400;
+    font-size: 18px;
+    background-color: var(--primary-second-color);
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        display: block;
+        width: 14px;
+        height: 14px;
+        background: url('../images/icon-arrow-btn.svg') center center / cover no-repeat;
+        transform: translateY(-50%);
+    }
+}
+
+/* Повторяющийся заголовок */
+.main-title {
+    color: var(--light-color);
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: -0.02em;
+}
+
+/* Повторяющееся описание */
+.main-description {
+    margin-top: 24px;
+    color: var(--light-color);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 167%;
+    letter-spacing: -0.02em;
+}
+
+/* Основные элементы */
+
+/* Header */
+
+.header {
+    padding: 16px 0;
+    background-color: var(--primary-main-color);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+}
+
+.header__menu {
+    display: flex;
+    gap: 32px;
+    padding: 0;
+    font-family: var(--third-family);
+    list-style-type: none;
+}
+
+.header__menu-link {
+    position: relative;
+    padding-right: 40px;
+    color: var(--light-color);
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: none;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 24px;
+        background: url('../images/down-arrow.svg') center center / cover no-repeat;
+    }
+}
+
+.header__buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.header .button-login {
+    margin: 0;
+    padding: 18px 40px;
+    color: var(--primary-main-color);
+    background-color: var(--second-additional-color);
+    &::after {
+        display: none;
+    }
+}
+
+.header .button-try {
+    margin: 0;
+    padding: 18px 44px 18px 24px;
+    &::after {
+        right: 24px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Секция Get More */
+
+.more {
+    padding: 140px 0;
+    background: url('../images/get-more-bg.svg') 0px 192px / 100% no-repeat;
+    background-color: var(--primary-main-color);
+}
+
+.more__container {
+    display: grid;
+    grid-template-columns: 1fr 824px;
+    align-items: center;
+}
+
+.more__img {
+    width: 100%;
+    height: 549px;
+    background-color: var(--third-additional-color);
+}
+
+/* Секция Project Management */
+
+.project {
+    padding: 140px 0 100px 0;
+    background: url('../images/project-bg.svg') -765px 125px / 100% 70% no-repeat;
+}
+
+.project__container {
+    display: grid;
+    grid-template-columns: 1fr 686px;
+    align-items: center;
+    gap: 60px;
+}
+
+.project .main-title,
+.project .main-description {
+    color: var(--dark-color);
+}
+
+.project__img {
+    width: 100%;
+    height: 479px;
+    background-color: var(--third-additional-color);
+}
+
+/* Секция Work */
+
+.work {
+    padding-bottom: 140px;
+}
+
+.work__container {
+    display: grid;
+    grid-template-columns: 710px 1fr;
+    align-items: center;
+    gap: 100px;
+}
+
+.work__img {
+    width: 100%;
+    height: 661px;
+    background: url('../images/work-bg.svg') center center / cover no-repeat;
+}
+
+.work .main-title,
+.work .main-description {
+    color: var(--dark-color);
+}
+
+/* Секция Use */
+
+.use {
+    padding: 100px 0;
+    background-color: var(--primary-main-color);
+}
+
+.use__container {
+    display: grid;
+    grid-template-columns: 1fr 686px;
+    align-items: center;
+    gap: 98px;
+}
+
+.use__img {
+    width: 100%;
+    height: 479px;
+    background-color: var(--third-additional-color);
+}
+
+/* Секция Customize */
+
+.customize {
+    padding: 140px 0;
+}
+
+.customize__container {
+    display: grid;
+    grid-template-columns: 714px 1fr;
+    align-items: center;
+    gap: 98px;
+}
+
+.customize .main-title,
+.customize .main-description {
+    color: var(--dark-color);
+}
+
+.customize__img {
+    width: 100%;
+    height: 532px;
+    background-color: var(--third-additional-color);
+}
+
+/* Секция Plans */
+
+.plans {
+    padding: 140px 0;
+}
+
+.plans .main-title,
+.plans .main-description {
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.plans__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-top: 60px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.plans__item {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid var(--second-additional-color);
+    border-radius: 10px;
+    padding: 40px 44px;
+}
+
+.plans__item-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.plans__item-price {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+
+}
+
+.plans__item-description {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+
+.plans__item-advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-left: 37px;
+    list-style-type: none;
+}
+
+.plans__item-list {
+    position: relative;
+    color: var(--dark-color);
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -37px;
+        width: 18px;
+        height: 18px;
+        background: url('../images/black-list.svg') center center / cover no-repeat;
+    }
+}
+
+.plans__item .main-button {
+    align-self: flex-start;
+    margin-top: 0;
+    border: 1px solid var(--second-additional-color);
+    border-radius: 8px;
+    padding: 16px 40px;
+    color: var(--dark-color);
+    font-size: 16px;
+    background-color: var(--light-color);
+    &::after {
+        display: none;
+    }
+}
+
+/* Главная карточка */
+
+.plans__item-main {
+    border: none;
+    padding: 80px 44px;
+    background-color: var(--primary-main-color);
+}
+
+.plans__item-main .plans__item-title,
+.plans__item-main .plans__item-description,
+.plans__item-main .plans__item-list {
+    color: var(--light-color);
+}
+
+.plans__item-main .plans__item-price {
+    color: var(--second-additional-color);
+}
+
+.plans__item-main .plans__item-list {
+    font-size: 18px;
+    &::before {
+        background: url('../images/gold-list.svg') center center / cover no-repeat;
+    }
+}
+
+.plans__item-main .main-button {
+    border: none;
+    color: var(--light-color);
+    background-color: var(--primary-second-color);
+}
+
+/* Секция Your work */
+
+.your-work {
+    position: relative;
+    padding: 140px 0;
+    background-color: var(--primary-main-color);
+}
+
+.your-work__container {
+    padding: 0 208px;
+    text-align: center;
+}
+
+.your-work__img {
+    position: absolute;
+    bottom: -78px;
+    left: 0;
+}
+
+/* Секция Your data */
+
+.your-data {
+    padding: 140px 0;
+}
+
+.your-data__container {
+    display: grid;
+    grid-template-columns: 1fr 681px;
+    align-items: center;
+}
+
+.your-data .main-title,
+.your-data .main-description {
+    color: var(--dark-color);
+}
